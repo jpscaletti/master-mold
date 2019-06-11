@@ -1,2 +1,4 @@
-# master-mold
-A project mold for all Python projects
+
+# Master Mold
+
+A master mold for all Python projects
