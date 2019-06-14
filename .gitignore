@@ -26,7 +26,7 @@ MANIFEST
 # Environments
 .env
 .venv
-covreport/*
+covreport
 pip-wheel-metadata
 .tox
 

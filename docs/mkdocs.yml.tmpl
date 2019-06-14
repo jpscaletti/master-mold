@@ -1,11 +1,14 @@
 ---
-site_name: Master Mold
-site_description: lorem ipsum
-site_author: Juan-Pablo Scaletti
-site_url: https://github.com/jpscaletti/mastermold
+nav:
+  - [[ "\n  - ".join(docs_nav) ]]
 
-repo_name: jpscaletti/mastermold
-repo_url: https://github.com/jpscaletti/mastermold
+site_name: [[ title ]]
+site_description: [[ description ]]
+site_author: [[ author ]]
+site_url: https://github.com/[[ github_repo ]]
+
+repo_name: [[ github_repo ]]
+repo_url: https://github.com/[[ github_repo ]]
 edit_uri: ""
 
 theme:
@@ -25,10 +28,12 @@ extra_css:
 extra:
   # manifest: "manifest.webmanifest"
   social:
-    # - type: globe
-    #   link: https://example.com
+    [%- if home_url %]
+    - type: globe
+      link: [[ home_url ]]
+    [% endif -%]
     - type: github-alt
-      link: https://github.com/jpscaletti/mastermold
+      link: https://github.com/[[ github_repo ]]
 
 markdown_extensions:
   - admonition
@@ -53,9 +58,12 @@ markdown_extensions:
   - pymdownx.tasklist
   - pymdownx.tilde
 
-nav:
-  - index.md
-
+[%- if google_analytics -%]
+google_analytics:
+  - [[ google_analytics ]]
+  - auto
+[%- else -%]
 # google_analytics:
 #   - UA-XXXXXXXX-X
 #   - auto
+[%- endif %]

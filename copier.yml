@@ -1,0 +1,31 @@
+title: Master Mold
+name: mastermold
+version: "1.0"
+author: Juan-Pablo Scaletti
+author_email: juanpablo@jpscaletti.com
+description: Lorem ipsum.
+repo_name: jpscaletti/mastermold
+home_url: ""
+docs_url: ""
+install_requires: ""
+entry_points: ""
+coverage_omit: ""
+
+google_analytics: ""
+docs_nav:
+  - index.md
+
+_exclude:
+  - ".venv"
+  - ".venv/*"
+  - ".git"
+  - ".git/*"
+
+_skip_if_exists:
+  - "tests/__init__.py"
+  - "tests/conftest.py"
+  - "[[ name ]]/__init__.py"
+  - "docs/docs/index.md"
+
+_tasks:
+  - "rm README"

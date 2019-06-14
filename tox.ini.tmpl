@@ -19,6 +19,10 @@ exclude_lines =
     raise NotImplementedError
     if __name__ == .__main__.:
     if 0:
+[% if coverage_omit -%]
+omit =
+	[[ coverage_omit ]]
+[%- endif %]
 
 [coverage:html]
 directory = covreport

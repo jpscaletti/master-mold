@@ -1,12 +1,12 @@
 [metadata]
-name = mastermold
-version="1.0"
-author = Juan-Pablo Scaletti
-author_email = juanpablo@jpscaletti.com
-description = lorem ipsum
+name = [[ name ]]
+version= [[ version ]]
+author = [[ author ]]
+author_email = [[ author_email ]]
+description = [[ description ]]
 long_description = file:README.md
 long_description_content_type = text/markdown
-url = https://github.com/jpscaletti/mastermold
+url = [% if home_url -%] [[ home_url ]] [%- else -%] https://github.com/[[ repo_name ]] [%- endif %]
 license_file = LICENSE.txt
 classifiers =
     Development Status :: 4 - Beta
@@ -20,10 +20,11 @@ universal = 1
 
 
 [options]
-python_requires = >=3.6,<4.0
-install_requires =
 include_package_data = true
 packages = find:
+python_requires = >=3.6,<4.0
+install_requires =
+    [[ install_requires ]]
 
 [options.packages.find]
 exclude =
@@ -46,7 +47,10 @@ docs =
     pygments-github-lexers
 
 [options.entry_points]
-# None
+[% if entry_points -%]
+console_scripts =
+    [[ entry_points ]]
+[%- endif %]
 
 
 [flake8]
