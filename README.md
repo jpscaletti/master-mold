@@ -3,6 +3,8 @@
 
 A master mold for all Python packages.
 
+![MASTER MOLD](https://repository-images.githubusercontent.com/186540545/4b451280-762b-11e9-8013-2464b596792c) 
+
 The idea is to reduce the tedious work necessary to keep all (of my) packages up-to-date
 with the features and/or best practices for packaging.
 
@@ -15,7 +17,7 @@ To do so, it uses [Copier](https://github.com/jpscaletti/copier).
 To use this master mold for a new project, simply install copier globally and call it with this repo url:
 
 ```bash
-$ copier git@github.com:jpscaletti/mastermold.git my-new-project
+copier git@github.com:jpscaletti/mastermold.git my-new-project
 ```
 
 Answer the cuestions (like its name, a description, the repo URL, etc.) to customize it to your individual project needs.
