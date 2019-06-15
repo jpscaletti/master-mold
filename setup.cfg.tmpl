@@ -32,12 +32,7 @@ exclude =
 
 [options.extras_require]
 testing =
-    pytest
-    pytest-cov
-    pytest-flake8
-    flake8
-    ipdb
-    tox
+    [[ "\n    ".join(test_requires) ]]
 
 docs =
 [% if has_docs -%]

@@ -23,19 +23,27 @@ data = {
     "home_url": "",
     "docs_url": "",
     "development_status": "4 - Beta",
+    "minimal_python": 3.6,
     "install_requires": [
         "foo",
         "bar",
     ],
+    "test_requires": [
+        "pytest",
+        "pytest-cov",
+        "pytest-flake8",
+        "flake8",
+        "ipdb",
+        "tox",
+    ],
     "entry_points": "",
-    "minimal_python": 3.6,
 
     "coverage_omit": [
         "foo",
     ],
 
     "copyright": "2019",
-    "has_docs": True,  # Overwritten by `save_current_nav`.
+    "has_docs": True,
     "google_analytics": "UA-XXXXXXXX-X",
     "docs_nav": [],  # Overwritten by `save_current_nav`.
 }
