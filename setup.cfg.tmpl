@@ -1,5 +1,5 @@
 [metadata]
-name = [[ name ]]
+name = [[ pypi_name or name ]]
 version= [[ version ]]
 author = [[ author ]]
 author_email = [[ author_email ]]
@@ -24,7 +24,7 @@ include_package_data = true
 packages = find:
 python_requires = >=3.6,<4.0
 install_requires =
-    [[ install_requires ]]
+    [[ "\n    ".join(install_requires) ]]
 
 [options.packages.find]
 exclude =

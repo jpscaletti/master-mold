@@ -21,7 +21,7 @@ exclude_lines =
     if 0:
 [% if coverage_omit -%]
 omit =
-	[[ coverage_omit ]]
+	[[ "\n    ".join(coverage_omit) ]]
 [%- endif %]
 
 [coverage:html]
