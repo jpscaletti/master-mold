@@ -34,6 +34,7 @@ data = {
         "foo",
     ],
 
+    "copyright": "2019",
     "has_docs": True,  # Overwritten by `save_current_nav`.
     "google_analytics": "UA-XXXXXXXX-X",
     "docs_nav": [],  # Overwritten by `save_current_nav`.
