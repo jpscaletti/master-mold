@@ -9,7 +9,7 @@ long_description_content_type = text/markdown
 url = [% if home_url -%] [[ home_url ]] [%- else -%] https://github.com/[[ repo_name ]] [%- endif %]
 license_file = LICENSE.txt
 classifiers =
-    Development Status :: 4 - Beta
+    Development Status :: [[ development_status ]]
     Intended Audience :: Developers
     License :: OSI Approved :: MIT License
     Programming Language :: Python :: 3
@@ -22,7 +22,7 @@ universal = 1
 [options]
 include_package_data = true
 packages = find:
-python_requires = >=3.6,<4.0
+python_requires = >=[[ minimal_python ]],<4.0
 install_requires =
     [[ "\n    ".join(install_requires) ]]
 
@@ -40,11 +40,13 @@ testing =
     tox
 
 docs =
+[% if has_docs -%]
     mkdocs
     mkdocs-material
     pymdown-extensions
     pygments
     pygments-github-lexers
+[%- endif %]
 
 [options.entry_points]
 [% if entry_points -%]

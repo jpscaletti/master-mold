@@ -2,7 +2,10 @@ language: python
 
 matrix:
   include:
-    - python: 3.6
+[%- if minimal_python <= 3.5 %]
+    - python: 3.5[% endif %]
+[%- if minimal_python <= 3.6 %]
+    - python: 3.6[%-endif %]
     - python: 3.7
       dist: xenial
       sudo: true

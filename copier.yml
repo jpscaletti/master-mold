@@ -6,6 +6,7 @@ _exclude:
   - "README.md"
 
 _skip_if_exists:
+  - "mm.py"
   - "tests/__init__.py"
   - "tests/conftest.py"
   - "[[ name ]]/__init__.py"

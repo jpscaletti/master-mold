@@ -22,14 +22,19 @@ data = {
     "repo_name": "jpscaletti/mastermold",
     "home_url": "",
     "docs_url": "",
+    "development_status": "4 - Beta",
     "install_requires": [
         "foo",
         "bar",
     ],
     "entry_points": "",
+    "minimal_python": 3.6,
+
     "coverage_omit": [
         "foo",
     ],
+
+    "has_docs": True,  # Overwritten by `save_current_nav`.
     "google_analytics": "UA-XXXXXXXX-X",
     "docs_nav": [],  # Overwritten by `save_current_nav`.
 }
@@ -45,12 +50,15 @@ def save_current_nav():
 
 
 def do_the_thing():
-    save_current_nav()
+    if data["has_docs"]:
+        save_current_nav()
+
     copier.copy(
         "gh:jpscaletti/mastermold.git",
         ".",
         data=data,
         exclude=[
+            "copier.yml",
             "README.md",
             ".git",
             ".git/*",

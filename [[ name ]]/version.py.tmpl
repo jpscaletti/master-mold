@@ -2,7 +2,7 @@ import pkg_resources
 
 
 try:
-    __version__ = pkg_resources.require("[[ name ]]")[0].version
+    __version__ = pkg_resources.require("[[ pypi_name ]]")[0].version
 except Exception:  # pragma:no cover
     # Run pytest without needing to install the library
     __version__ = None
