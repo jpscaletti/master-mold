@@ -22,12 +22,12 @@ data = {
     "development_status": "4 - Beta",
     "minimal_python": 3.6,
     "install_requires": [
-        "foo",
-        "bar",
     ],
-    "test_requires": [
+    "testing_requires": [
         "pytest",
         "pytest-cov",
+    ],
+    "development_requires": [
         "pytest-flake8",
         "flake8",
         "ipdb",
@@ -36,7 +36,6 @@ data = {
     "entry_points": "",
 
     "coverage_omit": [
-        "foo",
     ],
 
     "copyright": "2019",

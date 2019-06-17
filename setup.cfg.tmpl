@@ -32,7 +32,10 @@ exclude =
 
 [options.extras_require]
 testing =
-    [[ "\n    ".join(test_requires) ]]
+    [[ "\n    ".join(testing_requires) ]]
+
+development =
+    [[ "\n    ".join(development_requires) ]]
 
 docs =
 [% if has_docs -%]
