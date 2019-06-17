@@ -7,9 +7,6 @@ Read more about it at https://github.com/jpscaletti/mastermold/
 """
 from pathlib import Path
 
-import copier
-from ruamel.yaml import YAML
-
 
 data = {
     "title": "Master Mold",
@@ -50,6 +47,8 @@ data = {
 
 
 def save_current_nav():
+    from ruamel.yaml import YAML
+
     yaml = YAML()
     mkdocs_path = Path("docs") / "mkdocs.yml"
     if not mkdocs_path.exists():
@@ -59,6 +58,8 @@ def save_current_nav():
 
 
 def do_the_thing():
+    import copier
+
     if data["has_docs"]:
         save_current_nav()
 
