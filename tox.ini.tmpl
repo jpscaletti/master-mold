@@ -8,6 +8,7 @@ py38
 [testenv]
 skip_install = true
 commands =
+	pip install -U pip
     pip install -e .
 	pip install .[testing]
     pytest -x .
