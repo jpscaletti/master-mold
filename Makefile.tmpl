@@ -33,7 +33,4 @@ coverage:
 	pytest --cov-report html --cov [[ name ]] [[ name ]] tests
 
 install:
-	pip install -e .
-	pip install .[testing]
-	pip install .[development]
-	[% if has_docs %]pip install .[docs][% endif %]
+	pip install -e .[dev]

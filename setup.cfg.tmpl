@@ -41,11 +41,12 @@ exclude =
 testing =
     [[ "\n    ".join(testing_requires) ]]
 
-development =
+dev =
+    # Testing & Validation
+    [[ "\n    ".join(testing_requires) ]]
     [[ "\n    ".join(development_requires) ]]
-
-[% if has_docs -%]
-docs =
+[%- if has_docs %]
+    # Documentation
     mkdocs
     mkdocs-material
     pymdown-extensions
@@ -56,9 +57,8 @@ docs =
 [options.entry_points]
 console_scripts =
     [[ entry_points ]]
+[% endif %]
 
-
-[% endif -%]
 [flake8]
 max-complexity = 10
 max-line-length = 88

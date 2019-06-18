@@ -15,10 +15,11 @@ To do so, it uses [Copier](https://github.com/jpscaletti/copier).
 
 To use this master mold for a new or an existing project:
 
-1. Copy the `mm.py` to the project folder.
-2. Edit the file and customized with the individual project data.
-3. When it's ready, install [Copier](https://github.com/jpscaletti/copier); and
-4. Run `python mm.py` to auto-generate the packaging files.
+1. Download this repo to your projects folder.
+2. Copy the `mm.py` to your project.
+3. Edit the `mm.py` file and customized with the individual project data.
+4. When it's ready, install [Copier](https://github.com/jpscaletti/copier); and
+5. Run `python mm.py` to auto-generate the packaging files.
 
 When you want to change the package data, change them in the `mm.py` file, **not** in the auto-generated files, and then run `python mm.py` to update them.
 

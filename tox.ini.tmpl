@@ -9,9 +9,8 @@ py38
 skip_install = true
 commands =
 	pip install -U pip
-    pip install -e .
 	pip install .[testing]
-    pytest -x .
+    pytest -x [[ name ]] tests
 
 [coverage:run]
 branch = True
