@@ -16,6 +16,7 @@ data = {
     "author": "Juan-Pablo Scaletti",
     "author_email": "juanpablo@jpscaletti.com",
     "description": "Lorem ipsum sit amet.",
+    "copyright": "2019",
     "repo_name": "jpscaletti/mastermold",
     "home_url": "",
     "docs_url": "",
@@ -38,26 +39,32 @@ data = {
     "coverage_omit": [
     ],
 
-    "copyright": "2019",
     "has_docs": True,
     "google_analytics": "UA-XXXXXXXX-X",
-    "docs_nav": [],  # Overwritten by `save_current_nav`.
+    "docs_nav": [],
 }
 
-
-def save_current_nav():
-    from ruamel.yaml import YAML
-
-    yaml = YAML()
-    mkdocs_path = Path("docs") / "mkdocs.yml"
-    if not mkdocs_path.exists():
-        return
-    mkdocs = yaml.load(mkdocs_path)
-    data["docs_nav"] = mkdocs.get("nav")
+exclude = [
+    "copier.yml",
+    "README.md",
+    ".git",
+    ".git/*",
+    ".venv",
+    ".venv/*",
+]
 
 
 def do_the_thing():
     import copier
+    from ruamel.yaml import YAML
+
+    def save_current_nav():
+        yaml = YAML()
+        mkdocs_path = Path("docs") / "mkdocs.yml"
+        if not mkdocs_path.exists():
+            return
+        mkdocs = yaml.load(mkdocs_path)
+        data["docs_nav"] = mkdocs.get("nav")
 
     if data["has_docs"]:
         save_current_nav()
@@ -66,14 +73,7 @@ def do_the_thing():
         "gh:jpscaletti/mastermold.git",
         ".",
         data=data,
-        exclude=[
-            "copier.yml",
-            "README.md",
-            ".git",
-            ".git/*",
-            ".venv",
-            ".venv/*",
-        ],
+        exclude=exclude,
         force=True,
         cleanup_on_error=False
     )

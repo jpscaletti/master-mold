@@ -36,4 +36,4 @@ install:
 	pip install -e .
 	pip install .[testing]
 	pip install .[development]
-	pip install .[docs]
+	[% if has_docs %]pip install .[docs][% endif %]

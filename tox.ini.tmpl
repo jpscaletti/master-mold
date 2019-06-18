@@ -22,7 +22,7 @@ exclude_lines =
     raise NotImplementedError
     if __name__ == .__main__.:
     if 0:
-[% if coverage_omit -%]
+[%- if coverage_omit %]
 omit =
 	[[ "\n    ".join(coverage_omit) ]]
 [%- endif %]
