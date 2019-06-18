@@ -7,6 +7,12 @@ description = [[ description ]]
 long_description = file:README.md
 long_description_content_type = text/markdown
 url = [% if home_url -%] [[ home_url ]] [%- else -%] https://github.com/[[ repo_name ]] [%- endif %]
+[% if project_urls -%]
+project_urls =
+[%- for name, url in project_urls.items() %]
+    [[ name ]] = [[ url ]]
+[% endfor %]
+[%- endif %]
 license_file = LICENSE.txt
 classifiers =
     Development Status :: [[ development_status ]]

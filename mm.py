@@ -19,7 +19,11 @@ data = {
     "copyright": "2019",
     "repo_name": "jpscaletti/mastermold",
     "home_url": "",
-    "docs_url": "",
+    # Displayed in the pypi project page
+    "project_urls": {
+        "Documentation": "",
+    },
+
     "development_status": "4 - Beta",
     "minimal_python": 3.6,
     "install_requires": [
