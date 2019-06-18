@@ -45,14 +45,13 @@ docs =
     pygments
     pygments-github-lexers
 [%- endif %]
-
+[% if entry_points %]
 [options.entry_points]
-[% if entry_points -%]
 console_scripts =
     [[ entry_points ]]
-[%- endif %]
 
 
+[% endif -%]
 [flake8]
 max-complexity = 10
 max-line-length = 88
