@@ -3,6 +3,7 @@ _exclude:
   - ".venv/*"
   - ".git"
   - ".git/*"
+  - ".DS_Store"
   - "README.md"
 
 _skip_if_exists:
