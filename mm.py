@@ -45,7 +45,6 @@ data = {
 
     "has_docs": True,
     "google_analytics": "UA-XXXXXXXX-X",
-    "docs_nav": [],
 }
 
 exclude = [
@@ -68,10 +67,13 @@ def do_the_thing():
         if not mkdocs_path.exists():
             return
         mkdocs = yaml.load(mkdocs_path)
-        data["docs_nav"] = mkdocs.get("nav")
+        nav = list(filter(None, mkdocs.get("nav") or []))
+        data["docs_nav"] = nav or ["index.md"]
 
     if data["has_docs"]:
         save_current_nav()
+    else:
+        data["docs_nav"] = []
 
     copier.copy(
         # "gh:jpscaletti/mastermold.git",
