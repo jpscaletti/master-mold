@@ -1,3 +1,14 @@
+.md-sidebar--secondary {
+	background-color: #f8f8f8;
+	border: 1px solid #eee;
+	margin-left: 100%;
+}
+.md-nav {
+	background-color: #f8f8f8;
+}
+.md-nav--primary {
+	background-color: #fff;
+}
 .md-content {
 	font-size: 150%;
 	max-width: 800px;
@@ -5,7 +16,6 @@
 .md-typeset .highlight pre {
 	padding: .7rem .6rem;
 }
-
 .md-typeset .admonition {
 	font-size:  0.75rem;
 }
