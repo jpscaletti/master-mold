@@ -5,10 +5,10 @@ nav:
 site_name: [[ title ]]
 site_description: [[ description ]]
 site_author: [[ author ]]
-site_url: https://github.com/[[ github_repo ]]
+site_url: https://github.com/[[ repo_name ]]
 
-repo_name: [[ github_repo ]]
-repo_url: https://github.com/[[ github_repo ]]
+repo_name: [[ repo_name ]]
+repo_url: https://github.com/[[ repo_name ]]
 edit_uri: ""
 
 theme:
@@ -33,7 +33,7 @@ extra:
       link: [[ home_url ]]
     [% endif -%]
     - type: github-alt
-      link: https://github.com/[[ github_repo ]]
+      link: https://github.com/[[ repo_name ]]
 
 markdown_extensions:
   - admonition
@@ -58,7 +58,7 @@ markdown_extensions:
   - pymdownx.tasklist
   - pymdownx.tilde
 
-[%- if google_analytics -%]
+[% if google_analytics -%]
 google_analytics:
   - [[ google_analytics ]]
   - auto
