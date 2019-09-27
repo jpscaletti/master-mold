@@ -5,9 +5,6 @@ COPY THIS FILE TO YOUR PROJECT.
 This file generates all the necessary files for packaging for the project.
 Read more about it at https://github.com/jpscaletti/mastermold/
 """
-from pathlib import Path
-
-
 data = {
     "title": "Master Mold",
     "name": "mastermold",
@@ -42,9 +39,6 @@ data = {
 
     "coverage_omit": [
     ],
-
-    "has_docs": True,
-    "google_analytics": "UA-XXXXXXXX-X",
 }
 
 exclude = [
@@ -59,21 +53,6 @@ exclude = [
 
 def do_the_thing():
     import copier
-    from ruamel.yaml import YAML
-
-    def save_current_nav():
-        yaml = YAML()
-        mkdocs_path = Path("docs") / "mkdocs.yml"
-        if not mkdocs_path.exists():
-            return
-        mkdocs = yaml.load(mkdocs_path)
-        nav = list(filter(None, mkdocs.get("nav") or []))
-        data["docs_nav"] = nav or ["index.md"]
-
-    if data["has_docs"]:
-        save_current_nav()
-    else:
-        data["docs_nav"] = []
 
     copier.copy(
         # "gh:jpscaletti/mastermold.git",
@@ -81,7 +60,7 @@ def do_the_thing():
         ".",
         data=data,
         exclude=exclude,
-        force=True,
+        force=False,
         cleanup_on_error=False
     )
 

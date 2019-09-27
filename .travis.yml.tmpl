@@ -1,19 +1,16 @@
+dist: bionic
 language: python
+python:
+[%- if minimal_python <= 3.6 %]
+  - '3.6'[%-endif %]
+  - '3.7'
+  - '3.8-dev'
+  - 'nightly'
 
 matrix:
-  include:
-[%- if minimal_python <= 3.5 %]
-    - python: 3.5[% endif %]
-[%- if minimal_python <= 3.6 %]
-    - python: 3.6[%-endif %]
-    - python: 3.7
-      dist: xenial
-      sudo: true
+  allow_failures:
+    - python: 'nightly'
 
-before_install:
-  - pip install -U pip
-
-install:
-  - pip install .[testing]
-
+before_install: pip install -U pip
+install: pip install .[testing]
 script: pytest -x [[ name ]] tests

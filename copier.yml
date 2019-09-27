@@ -11,7 +11,6 @@ _skip_if_exists:
   - "tests/__init__.py"
   - "tests/conftest.py"
   - "[[ name ]]/__init__.py"
-  - "docs/docs/index.md"
 
 _tasks:
   - "touch README.md"
