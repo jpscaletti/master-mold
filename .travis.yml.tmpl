@@ -4,14 +4,14 @@ language: python
 python:
 [%- if minimal_python <= 3.6 %]
   - '3.6'[%-endif %]
-  - '3.7'
+[%- if minimal_python <= 3.7 %]
+  - '3.7'[%-endif %]
   - '3.8-dev'
-  - 'nightly'
 
 matrix:
   allow_failures:
-    - python: 'nightly'
-
+    - python: '3.8-dev'
+ 
 before_install: pip install -U pip coveralls
 install: pip install .[testing]
 script: pytest --cov [[ name ]] [[ name ]] tests
