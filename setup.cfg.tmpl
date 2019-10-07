@@ -37,7 +37,6 @@ testing =
     [[ "\n    ".join(testing_requires) ]]
 
 dev =
-    # Testing & Validation
     [[ "\n    ".join(testing_requires) ]]
     [[ "\n    ".join(development_requires) ]]
 
@@ -66,7 +65,6 @@ select = C,E,F,W,B,B950
 # D105  Missing docstring in magic method
 # D107  Missing docstring in __init__
 ignore = W503,E203,D100,D101,D102,D103,D104,D105,D107
-
 
 [tool:pytest]
 addopts = --doctest-modules

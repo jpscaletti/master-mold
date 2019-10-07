@@ -1,16 +1,16 @@
-_exclude:
-  - ".venv"
-  - ".venv/*"
-  - ".git"
-  - ".git/*"
-  - ".DS_Store"
+---
+exclude:
+  - ".*"
+  - ".*/*"
   - "README.md"
+  - "hecto.yml"
 
-_skip_if_exists:
+include:
+  - ".gitignore"
+  - ".travis.yml"
+
+skip_if_exists:
   - "mm.py"
   - "tests/__init__.py"
   - "tests/conftest.py"
   - "[[ name ]]/__init__.py"
-
-_tasks:
-  - "touch README.md"

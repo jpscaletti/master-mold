@@ -41,15 +41,6 @@ data = {
     ],
 }
 
-exclude = [
-    "copier.yml",
-    "README.md",
-    ".git",
-    ".git/*",
-    ".venv",
-    ".venv/*",
-]
-
 
 def do_the_thing():
     import copier
@@ -59,9 +50,12 @@ def do_the_thing():
         "../mastermold",  # Path to the local copy of Master Mold
         ".",
         data=data,
-        exclude=exclude,
         force=False,
-        cleanup_on_error=False
+        exclude=[
+            ".*"
+            ".*/*"
+            "README.md"
+        ],
     )
 
 
