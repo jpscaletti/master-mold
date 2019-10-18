@@ -1,6 +1,6 @@
 [tox]
 skipsdist = True
-envlist = [% if minimal_python <= 3.6 %]py36,[% endif -%] [%- if minimal_python <= 3.7 %]py37,[% endif %] py38
+envlist = [% if minimal_python <= 3.6 %]py36,[% endif -%] [%- if minimal_python <= 3.7 %]py37,[% endif %]py38
 
 [testenv]
 skip_install = true
