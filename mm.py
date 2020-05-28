@@ -11,12 +11,14 @@ data = {
     "author": "Juan-Pablo Scaletti",
     "author_email": "juanpablo@jpscaletti.com",
     "description": "Lorem ipsum sit amet.",
-    "copyright": "2019",
+    "copyright": "2020",
     "repo_name": "jpscaletti/mastermold",
     "home_url": "",
     # Displayed in the pypi project page
     "project_urls": {
         "Documentation": "",
+        "Issues": "",
+        "CI": "",
     },
     "extra_classifiers": [],
 
@@ -29,7 +31,6 @@ data = {
         "pytest-cov",
     ],
     "development_requires": [
-        "pytest-flake8",
         "flake8",
         "ipdb",
         "tox",
@@ -39,6 +40,17 @@ data = {
     "coverage_omit": [
     ],
 }
+
+exclude = [
+    "hecto.yml",
+    "README.md",
+    ".git",
+    ".git/*",
+    ".venv",
+    ".venv/*",
+    ".DS_Store",
+    "CHANGELOG.md",
+]
 
 
 def do_the_thing():
@@ -50,12 +62,7 @@ def do_the_thing():
         ".",
         data=data,
         force=False,
-        exclude=[
-            ".*"
-            ".*/*"
-            ".*/**/*"
-            "README.md"
-        ],
+        exclude=exclude,
     )
 
 

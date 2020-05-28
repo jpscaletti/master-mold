@@ -43,7 +43,7 @@ dev =
     [[ "\n    ".join(testing_requires) ]]
     [[ "\n    ".join(development_requires) ]]
 
-[% if entry_points %]
+[% if entry_points -%]
 [options.entry_points]
 console_scripts =
     [[ entry_points ]]
