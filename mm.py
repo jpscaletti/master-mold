@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 """
 This file generates all the necessary files for packaging for the project.
-Read more about it at https://github.com/jpscaletti/mastermold/
+Read more about it at https://github.com/jpsca/mastermold/
 """
 data = {
     "title": "Master Mold",
@@ -12,7 +12,7 @@ data = {
     "author_email": "juanpablo@jpscaletti.com",
     "description": "Lorem ipsum sit amet.",
     "copyright": "2020",
-    "repo_name": "jpscaletti/mastermold",
+    "repo_name": "jpsca/mastermold",
     "home_url": "",
     # Displayed in the pypi project page
     "project_urls": {
@@ -57,8 +57,8 @@ def do_the_thing():
     import hecto
 
     hecto.copy(
-        # "gh:jpscaletti/mastermold.git",
-        "../mastermold",  # Path to the local copy of Master Mold
+        "gh:jpsca/mastermold.git",
+        # "../mastermold",  # Path to the local copy of Master Mold
         ".",
         data=data,
         force=False,
